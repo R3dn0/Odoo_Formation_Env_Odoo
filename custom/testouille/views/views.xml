@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="testouille.list">
+      <field name="name">testouille list</field>
+      <field name="model">testouille.testouille</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="testouille.action_window">
+      <field name="name">testouille window</field>
+      <field name="res_model">testouille.testouille</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="testouille.action_server">
+      <field name="name">testouille server</field>
+      <field name="model_id" ref="model_testouille_testouille"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="testouille" id="testouille.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="testouille.menu_1" parent="testouille.menu_root"/>
+    <menuitem name="Menu 2" id="testouille.menu_2" parent="testouille.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="testouille.menu_1_list" parent="testouille.menu_1"
+              action="testouille.action_window"/>
+    <menuitem name="Server to list" id="testouille" parent="testouille.menu_2"
+              action="testouille.action_server"/>
+-->
+  </data>
+</odoo>
