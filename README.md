@@ -1,4 +1,4 @@
-Setup
+Setup (with postgres installed)
 ```bash
 createuser odoo
 createdb -U odoo my_odoo_db
