@@ -1,14 +1,18 @@
-Install requirement from odoo and create a `postgres` db for user odoo with  using
-```
-createdb -U odoo my_odoo_db
-```
-
-Launch from `./` with 
+Setup
 ```bash
-# Option 1 : Activer le venv
-source .venv/bin/activate
-python odoo/odoo-bin -c odoo.conf
+createuser odoo
+createdb -U odoo my_odoo_db
 
-# Option 2 : Utiliser directement le binaire du venv
-./.venv/bin/python odoo/odoo-bin -c odoo.conf
+python3.12 -m venv .venv
+source .venv/bin/activate
+
+pip install -r odoo/requirements.txt
+
+python odoo/odoo-bin -c odoo.conf -i base
+```
+
+For futur launch from `./` use 
+```bash
+source .venv/bin/activate
+python3.12 odoo/odoo-bin -c odoo.conf
 ```
