@@ -5,5 +5,5 @@ createdb -U odoo my_odoo_db
 
 Launch from `./` with 
 ```
-python3.12 odoo/odoo-bin -c odoo.conf -d my_odoo_db
+python3.12 odoo/odoo-bin -c odoo.conf
 ```
